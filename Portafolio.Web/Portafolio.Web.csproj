@@ -129,7 +129,6 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Shared\Layout.cshtml" />
     <Content Include="Areas\Admin\Assets\fonts\fa-regular-400.eot" />
     <Content Include="Areas\Admin\Assets\fonts\fa-regular-400.ttf" />
     <Content Include="Areas\Admin\Assets\fonts\fa-regular-400.woff" />
@@ -138,13 +137,11 @@
     <Content Include="Areas\Admin\Assets\fonts\fa-solid-900.ttf" />
     <Content Include="Areas\Admin\Assets\fonts\fa-solid-900.woff" />
     <Content Include="Areas\Admin\Assets\fonts\fa-solid-900.woff2" />
-    <Content Include="Areas\Admin\Views\Experiencia\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Habilidades\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Testimonios\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Usuario\Index.cshtml" />
     <Content Include="Areas\Admin\Views\_Viewstart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <None Include="packages.config" />
+    <Content Include="Views\Default\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -154,7 +151,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Portafolio.Modelo\Portafolio.Modelo.csproj">
