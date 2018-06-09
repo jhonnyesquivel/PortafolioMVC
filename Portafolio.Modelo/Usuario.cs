@@ -1,10 +1,12 @@
 namespace Portafolio.Modelo
 {
+    using Helper;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     [Table("Usuario")]
     public partial class Usuario
@@ -66,5 +68,59 @@ namespace Portafolio.Modelo
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Testimonio> Testimonios { get; set; }
+
+        public ResponseModel Acceder(string Email, string Password)
+        {
+            ResponseModel rm = new ResponseModel();
+
+            try
+            {
+                using (var ctx = new PortafolioModel())
+                {
+                    Password = HashHelper.MD5(Password);
+                    var usuario = ctx.Usuarios.Where(x => x.Email == Email)
+                                               .Where(x => x.Password == Password)
+                                               .SingleOrDefault();
+
+                    if (usuario != null)
+                    {
+                        SessionHelper.AddUserToSession(usuario.id.ToString());
+                        rm.SetResponse(true);
+                    }
+                    else
+                    {
+                        rm.SetResponse(false, "Acceso denegado");
+
+                    }
+                }
+
+                return rm;
+            }
+            catch (Exception ex)
+            {
+                rm.SetResponse(false, ex.Message);
+            }
+            return rm;
+        }
+
+        public Usuario Obtener(int idUsuario) {
+            Usuario usuario = new Usuario();
+
+            try
+            {
+                using (var ctx = new PortafolioModel())
+                {
+                    usuario = ctx.Usuarios.Where(x => x.id == idUsuario)
+                                          .FirstOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return usuario;
+        }
     }
 }

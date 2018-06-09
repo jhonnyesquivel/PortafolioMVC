@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Helper
+namespace Portafolio.Helper
 {
     public static class HashHelper
     {

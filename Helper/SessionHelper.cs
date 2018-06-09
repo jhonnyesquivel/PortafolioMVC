@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Security;
 
-namespace Helper
+namespace Portafolio.Helper
 {
     public class SessionHelper
     {
