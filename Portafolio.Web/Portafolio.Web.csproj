@@ -95,31 +95,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Admin\Assets\css\admin-style.css" />
-    <Content Include="Areas\Admin\Assets\css\bootstrap.css" />
-    <Content Include="Areas\Admin\Assets\css\bootstrap.min.css" />
-    <Content Include="Areas\Admin\Assets\css\fontawesome.min.css" />
-    <Content Include="Areas\Admin\Assets\fonts\fa-regular-400.svg" />
-    <Content Include="Areas\Admin\Assets\fonts\fa-solid-900.svg" />
-    <Content Include="Areas\Admin\Assets\images\ajax-loader.gif" />
-    <Content Include="Areas\Admin\Assets\js\bootstrap.min.js" />
-    <Content Include="Areas\Admin\Assets\js\ini.js" />
-    <Content Include="Areas\Admin\Assets\js\jquery-3.3.1.min.js" />
-    <Content Include="Areas\Admin\Assets\js\jquery.anexgrid.min.js" />
-    <Content Include="Areas\Admin\Assets\js\jquery.form.js" />
     <Content Include="Global.asax" />
-    <Content Include="Areas\Admin\Assets\js\jquery.validate.min.js" />
-    <Content Include="Areas\Admin\Assets\js\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\ExperienciaController.cs" />
-    <Compile Include="Areas\Admin\Controllers\HabilidadesController.cs" />
-    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
-    <Compile Include="Areas\Admin\Controllers\TestimoniosController.cs" />
-    <Compile Include="Areas\Admin\Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -128,18 +108,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Assets\fonts\fa-regular-400.eot" />
-    <Content Include="Areas\Admin\Assets\fonts\fa-regular-400.ttf" />
-    <Content Include="Areas\Admin\Assets\fonts\fa-regular-400.woff" />
-    <Content Include="Areas\Admin\Assets\fonts\fa-regular-400.woff2" />
-    <Content Include="Areas\Admin\Assets\fonts\fa-solid-900.eot" />
-    <Content Include="Areas\Admin\Assets\fonts\fa-solid-900.ttf" />
-    <Content Include="Areas\Admin\Assets\fonts\fa-solid-900.woff" />
-    <Content Include="Areas\Admin\Assets\fonts\fa-solid-900.woff2" />
-    <Content Include="Areas\Admin\Views\_Viewstart.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
     <None Include="Web.Debug.config">
