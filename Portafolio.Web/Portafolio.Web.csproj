@@ -95,11 +95,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Assets\css\admin-style.css" />
+    <Content Include="Areas\Admin\Assets\css\bootstrap.min.css" />
+    <Content Include="Areas\Admin\Assets\css\bootstrap.theme.min.css" />
+    <Content Include="Areas\Admin\Assets\css\font-awesome.min.css" />
+    <Content Include="Areas\Admin\Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Areas\Admin\Assets\images\ajax-loader.gif" />
+    <Content Include="Areas\Admin\Assets\js\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Assets\js\ini.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery.anexgrid.min.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery.form.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery.validate.min.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery.validate.unobtrusive.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -108,6 +124,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Admin\Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Admin\Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Admin\Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\Admin\Assets\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
     <None Include="Web.Debug.config">
@@ -121,6 +149,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Helper\Helper.csproj">
+      <Project>{a049c26f-c80a-4acb-bc82-94d8f3975021}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Portafolio.Modelo\Portafolio.Modelo.csproj">
       <Project>{51ee6eda-0261-45d5-b81d-c76b886f56b1}</Project>
       <Name>Portafolio.Modelo</Name>
