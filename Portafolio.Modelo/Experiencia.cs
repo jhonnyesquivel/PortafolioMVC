@@ -64,8 +64,9 @@ namespace Portafolio.Modelo
             {
                 using (var ctx = new PortafolioModel())
                 {
-                    var experiencia = ctx.Entry(this);
-                    experiencia.State = EntityState.Deleted;
+                    var experiencia = ctx.Experiencias.Where(x => x.id == id).FirstOrDefault();
+                    var entry = ctx.Entry(experiencia);
+                    entry.State = EntityState.Deleted;
                     ctx.SaveChanges();
                     rm.SetResponse(true);
                 }

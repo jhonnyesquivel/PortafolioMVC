@@ -20,6 +20,7 @@
                 <th>Cargo</th>
                 <th>Desde</th>
                 <th>Hasta</th>
+                <th>Eliminar</th>
             </tr>
         </thead>
         <tbody>
@@ -32,8 +33,27 @@
                     <td>@item.Titulo</td>
                     <td>@item.Desde</td>
                     <td>@item.Hasta</td>
+                    <td>
+                        <bxutton  onclick="Eliminar(@item.Tipo, @item.id)" class="btn btn-danger">Eliminar</bxutton>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
+<script>
+    function Eliminar(tipo, id) {
+        if (confirm("Delea eliminar el registro?") == true) {
+                var url ='/admin/experiencia/eliminar?tipo=' + tipo + '&id=' + id
+            $.post(url, function (r) {
+                if (r.response) {
+                    window.location.href = r.href;
+                }
+            },"json");
+        }
+        else {
+            return false
+        }
+    }
+</script>
+
