@@ -1,0 +1,44 @@
+﻿@model Habilidad
+@{
+    ViewBag.Title = "Crud";
+
+}
+
+<h2 class="preheader">
+    @(Model.id > 0 ? Model.Nombre : "Nuevo Registro")
+</h2>
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"> <a href="~/admin/habilidades/">Habilidades</a></li>
+    <li class="breadcrumb-item active">@(Model.id > 0 ? Model.Nombre : "Nuevo Registro")</li>
+</ol>
+
+@using (Html.BeginForm("Guardar", "Habilidades", FormMethod.Post))
+{
+
+    @Html.HiddenFor(x => x.id)    
+    @Html.Hidden("Usuario_id", SessionHelper.GetUser())
+
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Nombre)
+        @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control", @placeholder = "Habilidad" })
+        @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "label label-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Dominio)
+        @Html.TextBoxFor(x => x.Dominio, new { @class = "form-control", @placeholder = "00" })
+        @Html.ValidationMessageFor(x => x.Dominio, null, new { @class = "label label-danger" })
+    </div>    
+    <div class="text-rigth">
+
+        <button type="submit" data-ajax="true" class="btn btn-primary">Guardar</button>
+    </div>
+
+}
+
+
+
+
+
+
