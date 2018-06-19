@@ -109,6 +109,20 @@
     <Content Include="Areas\Admin\Assets\js\jquery.js" />
     <Content Include="Areas\Admin\Assets\js\jquery.validate.min.js" />
     <Content Include="Areas\Admin\Assets\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Assets\css\admin-style.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\bootstrap.theme.min.css" />
+    <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\images\ajax-loader.gif" />
+    <Content Include="Assets\js\bootstrap.min.js" />
+    <Content Include="Assets\js\ini.js" />
+    <Content Include="Assets\js\jquery.anexgrid.min.js" />
+    <Content Include="Assets\js\jquery.form.js" />
+    <Content Include="Assets\js\jquery.js" />
+    <Content Include="Assets\js\jquery.validate.min.js" />
+    <Content Include="Assets\js\jquery.validate.unobtrusive.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Uploads\el.jpg" />
     <Content Include="Uploads\yo.jpg" />
@@ -150,8 +164,21 @@
     <Content Include="Areas\Admin\Views\Habilidades\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Habilidades\Crud.cshtml" />
     <Content Include="Areas\Admin\Views\Testimonios\Index.cshtml" />
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_viewstart.cshtml" />
+    <Content Include="Views\Shared\_MenuAdicional.cshtml" />
+    <Content Include="Views\Shared\_User.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
